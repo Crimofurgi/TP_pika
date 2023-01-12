@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="monApp">
+    <p>Vie player : {{viePlayer}}</p>
+    <p>Vie ennemy : {{vieEnnemy}}</p>
+    <p>Turn : {{turn}}</p>
+
+    <button @click="attack(),contreAttack()">Attack</button>
+    <button @click="speAttack(),contreAttack()" v-if="turn%3 == 0 && turn != 0"> Attack spé </button>
+    <br>
+    <button @click="soin(),contreAttack()">Soin</button>
+    <p>{{winner}}</p>
+    
+
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
